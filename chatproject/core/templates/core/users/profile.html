@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-lg-6">
+            <div class="d-flex mb-4">
+                <h5>Profile info</h5>
+                <a class="text-white ml-auto" href="{% url 'index' %}">Back to main page</a>
+            </div>
+            
+            <form action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ user_form|crispy }}
+                <button type="submit" class="btn btn-success">Save changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

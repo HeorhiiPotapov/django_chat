@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-lg-6">
+            <h2>Create new user</h2>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        {% comment %} <label for="username">Username</label> {% endcomment %}
+                        {{ form.username|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        {% comment %} <label for="email">Email</label> {% endcomment %}
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        {% comment %} <label for="password1">Password</label> {% endcomment %}
+                        {{ form.password1|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        {% comment %} <label for="password2">Password confirm</label> {% endcomment %}
+                        {{ form.password2|as_crispy_field }}
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+            <h5 class="mt-5">Have an account? You can Login 
+                <a class="text-white" href="{% url 'login' %}">Here</a>
+            </h5>
+            <a class="text-white ml-auto" href="{% url 'index' %}">Back to main page</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

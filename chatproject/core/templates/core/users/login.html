@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-lg-6">
+            <h2>Login form</h2>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-success">Log in</button>
+            </form>
+            <h5 class="mt-5">Need to create new Account? Click
+                <a class="text-white" href="{% url 'register' %}">Here</a>
+            </h5>
+            <a class="text-white ml-auto" href="{% url 'index' %}">Back to main page</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
