@@ -35,7 +35,9 @@
     ./manage.py createsuperuser --username example --email example@gmail.com
     ./manage.py createsuperuser --username test --email test@gmail.com
     
-Запуск сервера Redis
+Запуск сервера Redis (требуется Docker)
+    В Ubuntu 20.04 необходимый пакет "docker.io" в apt repos.
+        
     
     sudo docker run -p 6379:6379 -d redis:5
 
