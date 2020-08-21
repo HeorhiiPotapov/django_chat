@@ -1,16 +1,16 @@
 # django_chat
 
-$ source env/bin/activate
-$ pip install -r requirements.txt
-$ ./manage.py migrate
-$ ./manage.py createsuperuser --username example --email example@gmail.com
-$ ./manage.py createsuperuser --username test --email test@gmail.com
-$ sudo docker run -p 6379:6379 -d redis:5
+    $ source env/bin/activate
+    $ pip install -r requirements.txt
+    $ ./manage.py migrate
+    $ ./manage.py createsuperuser --username example --email example@gmail.com
+    $ ./manage.py createsuperuser --username test --email test@gmail.com
+    $ sudo docker run -p 6379:6379 -d redis:5
 
-'''
+
 to verify the docker image started corect run:
     $ sudo docker images | grep redis
-'''
+
 
 to start local server and make passible to chat with to different browsers run:
 
