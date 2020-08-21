@@ -9,6 +9,7 @@
 
 
 to verify the docker image started corect run:
+
     $ sudo docker images | grep redis
 
 
