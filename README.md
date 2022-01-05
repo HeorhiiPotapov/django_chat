@@ -9,5 +9,5 @@
     ./manage.py migrate 
     ./manage.py createsuperuser --username example --email example@gmail.com
     ./manage.py createsuperuser --username test --email test@gmail.com            
-    sudo docker run -p 6379:6379 -d redis:5
+    docker run -p 6379:6379 -d redis:5
     ./manage.py runserver
